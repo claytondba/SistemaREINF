@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Model.Framework;
 using System.Reflection;
-using My = MySql.Data.MySqlClient;
+using My = Npgsql;
 using Model;
 using System.Data;
 
@@ -16,7 +16,7 @@ namespace DAL.Framework
         private string _entityAlias;
         private const string _sr_deleted = " sr_deleted !='T'";
         private string _entityName;
-        private List<My.MySqlParameter> _stateParams;
+        private List<My.NpgsqlParameter> _stateParams;
         private List<string> _fields;
         private List<string> _joinFields;
         private List<string> _values;
@@ -73,9 +73,9 @@ namespace DAL.Framework
         public bool FrameworkExecuteProcedure(string proc_name)
         {
             if (proc_name.StartsWith("update"))
-                MySql.ConnectionManager.executeScalar(proc_name);
+                Postgres.ConnectionManager.executeScalar(proc_name);
             else
-                MySql.ConnectionManager.executeScalar("select " + proc_name);
+                Postgres.ConnectionManager.executeScalar("select " + proc_name);
             return true;
         }
         /// <summary>
@@ -103,7 +103,7 @@ namespace DAL.Framework
             {
                 _fields = new List<string>();
                 _values = new List<string>();
-                _stateParams = new List<My.MySqlParameter>();
+                _stateParams = new List<My.NpgsqlParameter>();
                 var tipo = classModule.GetType();
                 //Retornando os fields da classe
                 var fields = tipo.GetFields();
@@ -129,15 +129,15 @@ namespace DAL.Framework
                             if (propriedade.GetValue(classModule, null) != null)
                             {
                                 _values.Add(propriedade.GetValue(classModule, null).ToString());
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
                             }
                             else
                             {
                                 _values.Add("");
                                 if (propriedade.Name == "sr_deleted")
-                                    _stateParams.Add(new My.MySqlParameter(propriedade.Name, ""));
+                                    _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, ""));
                                 else
-                                    _stateParams.Add(new My.MySqlParameter(propriedade.Name, null));
+                                    _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, null));
                             }
                         }
                     }
@@ -190,9 +190,9 @@ namespace DAL.Framework
                             _stateParams.Remove(result.First());
                             //Verificando a condição para leitura do indice
                             if (string.IsNullOrEmpty(classModule.PrimitiveCondition))
-                                cod = MySql.ConnectionManager.executeScalar("select " + classModule.NamePrimitiveController + " from " + _entityName + " where sr_deleted !='T' order by sr_recno desc limit 1").ToString();
+                                cod = Postgres.ConnectionManager.executeScalar("select " + classModule.NamePrimitiveController + " from " + _entityName + " where sr_deleted !='T' order by sr_recno desc limit 1").ToString();
                             else
-                                cod = MySql.ConnectionManager.executeScalar(string.Format("select " + classModule.NamePrimitiveController + " from " + _entityName + " where sr_deleted !='T' and {0} order by sr_recno desc limit 1", classModule.PrimitiveCondition)).ToString();
+                                cod = Postgres.ConnectionManager.executeScalar(string.Format("select " + classModule.NamePrimitiveController + " from " + _entityName + " where sr_deleted !='T' and {0} order by sr_recno desc limit 1", classModule.PrimitiveCondition)).ToString();
 
                             //cod = (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0');
 
@@ -200,10 +200,10 @@ namespace DAL.Framework
                             p.SetValue(classModule, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0'), null);
                             _fields.Add(p.Name);
                             _values.Add((Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0'));
-                            _stateParams.Add(new My.MySqlParameter(p.Name, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0')));
+                            _stateParams.Add(new My.NpgsqlParameter(p.Name, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0')));
 
                             //Atualizando o arquivo de controle
-                            MySql.ConnectionManager.update(string.Format("update controle set numero ={0} + 1 where arquivo = '{1}'", cod, _entityName.ToUpper()));
+                            Postgres.ConnectionManager.update(string.Format("update controle set numero ={0} + 1 where arquivo = '{1}'", cod, _entityName.ToUpper()));
                         }
                         else
                         {
@@ -215,9 +215,9 @@ namespace DAL.Framework
                             _stateParams.Remove(result.First());
                             //Verificando a condição para leitura do indice
                             if (string.IsNullOrEmpty(classModule.PrimitiveCondition))
-                                cod = MySql.ConnectionManager.executeScalar("select codigo from " + _entityName + " where sr_deleted !='T' order by sr_recno desc limit 1").ToString();
+                                cod = Postgres.ConnectionManager.executeScalar("select codigo from " + _entityName + " where sr_deleted !='T' order by sr_recno desc limit 1").ToString();
                             else
-                                cod = MySql.ConnectionManager.executeScalar(string.Format("select codigo from " + _entityName + " where sr_deleted !='T' and {0} order by sr_recno desc limit 1", classModule.PrimitiveCondition)).ToString();
+                                cod = Postgres.ConnectionManager.executeScalar(string.Format("select codigo from " + _entityName + " where sr_deleted !='T' and {0} order by sr_recno desc limit 1", classModule.PrimitiveCondition)).ToString();
 
                             //cod = (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0');
 
@@ -225,14 +225,14 @@ namespace DAL.Framework
                             p.SetValue(classModule, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0'), null);
                             _fields.Add(p.Name);
                             _values.Add((Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0'));
-                            _stateParams.Add(new My.MySqlParameter(p.Name, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0')));
+                            _stateParams.Add(new My.NpgsqlParameter(p.Name, (Convert.ToInt32(cod) + 1).ToString().PadLeft(classModule.PadPrimitive, '0')));
 
                             //Atualizando o arquivo de controle
-                            MySql.ConnectionManager.update(string.Format("update controle set numero ={0} + 1 where arquivo = '{1}'", cod, _entityName.ToUpper()));
+                            Postgres.ConnectionManager.update(string.Format("update controle set numero ={0} + 1 where arquivo = '{1}'", cod, _entityName.ToUpper()));
                         }
                     }
 
-                    _lastInsertID = MySql.ConnectionManager.InsertWitchKey(sb.ToString(), _stateParams);
+                    _lastInsertID = Postgres.ConnectionManager.InsertWitchKey(sb.ToString(), _stateParams);
                     //Informando a Chave Primária do registro no Modelo
                     PropertyInfo pPrimary = classModule.GetType().GetProperty(_primaryKey);
                     pPrimary.SetValue(classModule, _lastInsertID, null);
@@ -262,7 +262,7 @@ namespace DAL.Framework
             {
                 _fields = new List<string>();
                 _values = new List<string>();
-                _stateParams = new List<My.MySqlParameter>();
+                _stateParams = new List<My.NpgsqlParameter>();
                 var tipo = classModule.GetType();
                 //Retornando os fields da classe
                 var fields = tipo.GetFields();
@@ -282,7 +282,7 @@ namespace DAL.Framework
                             {
 
                                 _values.Add(propriedade.GetValue(classModule, null).ToString());
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
                                 _where = String.Format("{0}=@{0}", propriedade.Name);
                             }
                         }
@@ -307,12 +307,12 @@ namespace DAL.Framework
                             if (propriedade.GetValue(classModule, null) != null)
                             {
                                 _values.Add(propriedade.GetValue(classModule, null).ToString());
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
                             }
                             else
                             {
                                 _values.Add("");
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, null));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, null));
                             }
                         }
                     }
@@ -354,7 +354,7 @@ namespace DAL.Framework
                 //if (_sql.Contains("real,"))
                 //    _sql = _sql.Replace("real,", "`real`,");
 
-                return MySql.ConnectionManager.update(_sql, _stateParams);
+                return Postgres.ConnectionManager.update(_sql, _stateParams);
 
             }
             catch (Exception ex)
@@ -379,7 +379,7 @@ namespace DAL.Framework
             {
                 _fields = new List<string>();
                 _values = new List<string>();
-                _stateParams = new List<My.MySqlParameter>();
+                _stateParams = new List<My.NpgsqlParameter>();
                 var tipo = classModule.GetType();
                 //Retornando os fields da classe
                 var fields = tipo.GetFields();
@@ -397,7 +397,7 @@ namespace DAL.Framework
                             if (propriedade.GetValue(classModule, null) != null)
                             {
                                 _values.Add(propriedade.GetValue(classModule, null).ToString());
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
                                 _where = String.Format("{0}=@{0}", propriedade.Name);
                             }
                         }
@@ -415,7 +415,7 @@ namespace DAL.Framework
                     if (!string.IsNullOrEmpty(_where))
                     {
                         sb.AppendLine(" where " + _where);
-                        return MySql.ConnectionManager.update(sb.ToString(), _stateParams);
+                        return Postgres.ConnectionManager.update(sb.ToString(), _stateParams);
                     }
                     else
                     {
@@ -428,7 +428,7 @@ namespace DAL.Framework
                     if (!string.IsNullOrEmpty(_where))
                     {
                         sb.AppendLine(" where " + _where);
-                        return MySql.ConnectionManager.update(sb.ToString(), _stateParams);
+                        return Postgres.ConnectionManager.update(sb.ToString(), _stateParams);
                     }
                     else
                     {
@@ -457,7 +457,7 @@ namespace DAL.Framework
             _functionFields = new List<string>();
             _functionFields = new List<string>();
             _cleanFunctionFields = new List<string>();
-            _stateParams = new List<My.MySqlParameter>();
+            _stateParams = new List<My.NpgsqlParameter>();
             Type Tp = classModule.GetType();
 
             //Configurando tamanho da paginação
@@ -490,7 +490,7 @@ namespace DAL.Framework
                             if (propriedade.GetValue(classModule, null) != null && propriedade.GetValue(classModule, null).ToString() != "0")
                             {
                                 _values.Add(propriedade.GetValue(classModule, null).ToString());
-                                _stateParams.Add(new My.MySqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
+                                _stateParams.Add(new My.NpgsqlParameter(propriedade.Name, propriedade.GetValue(classModule, null)));
                                 _where = String.Format("{1}.`{0}`=@{0}", propriedade.Name, _entityAlias);
                                 _primaryKey = propriedade.Name;
                                 _fields.Add(propriedade.Name);
@@ -671,7 +671,7 @@ namespace DAL.Framework
                     sb.AppendLine(" order by " + _custonOrderBy);
                 }
 
-                dt = MySql.ConnectionManager.consultaDt(_sql, _stateParams);
+                dt = Postgres.ConnectionManager.consultaDt(_sql, _stateParams);
             }
             else if (!string.IsNullOrEmpty(_custonWhere))
             {
@@ -718,7 +718,7 @@ namespace DAL.Framework
                     _sql += " order by " + _custonOrderBy;
                 }
 
-                dt = MySql.ConnectionManager.consultaDt(_sql, _stateParams);
+                dt = Postgres.ConnectionManager.consultaDt(_sql, _stateParams);
 
             }
             else

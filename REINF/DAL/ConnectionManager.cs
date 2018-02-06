@@ -18,6 +18,20 @@ namespace DAL.Postgres
     {
         public static NpgsqlConnection cn { get; set; }
         private static bool Log { get; set; }
+
+        public static int ErrosQt { get; set; }
+        public static List<Exception> ErrorColection { get; set; }
+        public static UsuariosModel Usuario { get; set; }
+        public static SessionModel Sessao { get; set; }
+        public static StringBuilder LogEvents { get; set; }
+        public static bool NoLog { get; set; }
+
+        public static void Inicializar()
+        {
+            LogEvents = new StringBuilder();
+            ErrorColection = new List<Exception>();
+        }
+
         private enum LogLevel
         {
             Max
@@ -35,10 +49,14 @@ namespace DAL.Postgres
         /// <returns></returns>
         private static bool conectar()
         {
-            cn = new NpgsqlConnection("Server=189.38.23.215;Port=5432;Database=glandata;User Id=postgres;Password=postgres;");
+            if (cn == null)
+                throw new InvalidOperationException("Nehuma conexão com o BD está ativada.");
+            //10.0.0.199     189.38.23.215
+            //cn = new MySqlConnection("Server=10.0.0.199;Database=nova;Uid=root;Pwd=beleza;");
             try
             {
-                cn.Open();
+                if (cn.State != System.Data.ConnectionState.Open)
+                    cn.Open();
                 return true;
             }
             catch (Exception ex)
@@ -85,6 +103,42 @@ namespace DAL.Postgres
                 }
             }
             return false;
+
+        }
+        /// <summary>
+        /// Metodo Insert Generico com Retorno de Chave Primária
+        /// </summary>
+        /// <param name="p_sql">String com o comando SQL</param>
+        /// <param name="p_listParams">Lista com os parametros</param>
+        /// <returns></returns>
+        public static int InsertWitchKey(string p_sql, List<NpgsqlParameter> p_listParams)
+        {
+            if (conectar())
+            {
+                using (NpgsqlCommand cmd = new NpgsqlCommand(p_sql, cn))
+                {
+                    foreach (NpgsqlParameter param in p_listParams)
+                        cmd.Parameters.Add(param);
+                    try
+                    {
+                        int result = cmd.ExecuteNonQuery();
+                        //LogEvent(cmd.CommandText);
+                        cmd.CommandText = "select LAST_INSERT_ID()";
+                        //LogEvent(cmd.CommandText);
+                        cmd.Parameters.Clear();
+                        return 1;//Convert.ToInt32(cmd.ExecuteScalar());
+                    }
+                    catch (Exception ex)
+                    {
+                        throw new Exception("Erro ao executar comando no Banco de Dados! " + ex.Message);
+                    }
+                    finally
+                    {
+                        desconectar();
+                    }
+                }
+            }
+            return 0;
 
         }
         /// <summary>
@@ -232,13 +286,13 @@ namespace DAL.Postgres
         /// <param name="p_sql">Comando SQL</param>
         /// <param name="list">Parametros</param>
         /// <returns></returns>
-        public static bool logar(string p_sql, List<MySqlParameter> list)
+        public static bool logar(string p_sql, List<NpgsqlParameter> list)
         {
             if (conectar())
             {
                 bool check = false;
                 NpgsqlCommand cmd = new NpgsqlCommand(p_sql, cn);
-                foreach (MySqlParameter param in list)
+                foreach (NpgsqlParameter param in list)
                 {
                     cmd.Parameters.Add(param);
                 }

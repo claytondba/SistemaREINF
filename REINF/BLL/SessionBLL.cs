@@ -27,6 +27,10 @@ namespace BLL
         {
             return new SessionDAL().GetCurrentSession();
         }
+        public bool TestPosrgresServer()
+        {
+            return new SessionDAL().FrameworkExecuteProcedure("* from usuarios;");
+        }
         public List<Exception> GetDebug(out int qtError)        
         {
             return new SessionDAL().GetDebug(out qtError);
