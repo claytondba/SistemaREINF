@@ -1,0 +1,16 @@
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll.config
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.pdb
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Model.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Mono.Security.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\MySql.Data.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\MySql.Web.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Model.pdb
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.xml
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.dll
+C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.pdb

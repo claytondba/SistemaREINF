@@ -32,6 +32,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,7 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Framework\BLL.cs" />
+    <Compile Include="Framework\IBLL.cs" />
+    <Compile Include="Framework\UsuarioModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionBLL.cs" />
+    <Compile Include="SysFormTriggerBLL.cs" />
+    <Compile Include="SysKeyValueBLL.cs" />
+    <Compile Include="SysLockupBLL.cs" />
+    <Compile Include="SysLogNotifyBLL.cs" />
+    <Compile Include="SysMenusBLL.cs" />
+    <Compile Include="SysNotifyBLL.cs" />
+    <Compile Include="SysProcBLL.cs" />
+    <Compile Include="SysProcParamBLL.cs" />
+    <Compile Include="SysReportsBLL.cs" />
+    <Compile Include="SysReportsDataBLL.cs" />
+    <Compile Include="Sys_filterBLL.cs" />
+    <Compile Include="UsuarioBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{b481ceff-bb30-4de6-b167-207b5fc6583c}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{41329826-e7c9-4d77-a908-d8848998cf2d}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
