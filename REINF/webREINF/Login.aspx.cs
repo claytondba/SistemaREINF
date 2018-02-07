@@ -28,7 +28,11 @@ namespace webREINF
                 //FormsAuthentication.RedirectFromLoginPage(loginTextBox.Text, true);
                 UsuariosReinfModel usuario = usu.LogarGetUser(loginTextBox.Text, senhaTextBox.Text);
                 Session["usuario"] = usuario;
-                Response.Redirect("HomeParceiro.aspx", true);
+
+                if (usuario.primeiro_acesso)
+                    Response.Redirect("PerceiroAcesso.aspx", true);
+                else
+                    Response.Redirect("HomeParceiro.aspx", true);
 
 
             }
