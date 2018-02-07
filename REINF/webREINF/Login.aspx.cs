@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Web.Security;
 
 namespace webREINF
 {
@@ -21,23 +22,22 @@ namespace webREINF
         {
             UsuariosReinfBLL usu = new UsuariosReinfBLL();
 
-            try
-            {
-                if (usu.Logar(loginTextBox.Text, senhaTextBox.Text))
-                {
 
-                }
-                else
-                {
-                    Label1.Text = "Usuário e/ou Senha Incorretos.";
-                }
+            if (usu.Logar(loginTextBox.Text, senhaTextBox.Text))
+            {
+                //FormsAuthentication.RedirectFromLoginPage(loginTextBox.Text, true);
+                UsuariosReinfModel usuario = usu.LogarGetUser(loginTextBox.Text, senhaTextBox.Text);
+                Session["usuario"] = usuario;
+                Response.Redirect("HomeParceiro.aspx", true);
+
 
             }
-            catch (Exception ex)
+            else
             {
-                Label1.Text = ex.Message;   
+                Label1.Text = "Usuário e/ou Senha Incorretos.";
             }
-            
+
+
         }
     }
 }

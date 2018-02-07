@@ -14,5 +14,9 @@ namespace BLL
         {
             return new UsuariosReinfDAL().Logar(login, senha);
         }
+        public UsuariosReinfModel LogarGetUser(string login, string senha)
+        {
+            return new UsuariosReinfDAL().LogarGetUser(login, senha);
+        }
     }
 }

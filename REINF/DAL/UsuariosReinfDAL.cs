@@ -16,6 +16,11 @@ namespace DAL
 
             return Convert.ToBoolean(Postgres.ConnectionManager.executeScalar(sql));
         }
+        public UsuariosReinfModel LogarGetUser(string login, string senha)
+        {
+            this.CustomWhere = string.Format("login ='{0}' and senha =md5('{1}')", login, senha);
+            return this.FrameworkGet(new UsuariosReinfModel()).First();
+        }
     }
 
 }

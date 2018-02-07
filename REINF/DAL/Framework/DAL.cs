@@ -614,9 +614,9 @@ namespace DAL.Framework
             foreach (string s in _joinFields)
             {
                 sb.Append(_aliasJoin);
-                sb.Append(".`");
+                sb.Append(".");
                 sb.Append(s);
-                sb.Append("` ");
+                sb.Append(" ");
                 sb.Append(" as " + _fieldToJoin);
                 sb.Append(", ");
 
@@ -626,9 +626,9 @@ namespace DAL.Framework
             {
                 _count++;
                 sb.Append(_entityAlias);
-                sb.Append(".`");
+                sb.Append(".");
                 sb.Append(s);
-                sb.Append("`");
+                sb.Append("");
                 if (_count != _fields.Count)
                     sb.Append(", ");
             }
