@@ -41,6 +41,18 @@ namespace BLL
         {
             return new SessionDAL().Connect(sessao);
         }
+        public bool Connect()
+        {
+            return new SessionDAL().Connect(
+            new Model.SessionModel()
+            {
+                User = "postgres",
+                Password = "beleza",
+                Server = "localhost",
+                Database = "reinf"
+
+            });
+        }
         public void RegisterSession(SessionModel sessao)
         {
             new SessionDAL().RegisterSession(sessao);

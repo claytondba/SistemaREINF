@@ -58,6 +58,7 @@
     <Compile Include="SysReportsDataBLL.cs" />
     <Compile Include="Sys_filterBLL.cs" />
     <Compile Include="UsuarioBLL.cs" />
+    <Compile Include="UsuariosReinfBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">

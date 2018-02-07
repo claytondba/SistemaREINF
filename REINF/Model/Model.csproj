@@ -61,6 +61,7 @@
     <Compile Include="SysTriggerParamModel.cs" />
     <Compile Include="Sys_filterModel.cs" />
     <Compile Include="UsuariosModel.cs" />
+    <Compile Include="UsuariosReinfModel.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

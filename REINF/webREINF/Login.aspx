@@ -23,8 +23,8 @@
                 <h5>Login Web REINF App</h5>
                 <hr />
                 <div class="login-inner">
-                    <asp:TextBox class="form-control email" placeholder="Digite o Login" ID="TextBox1" runat="server"></asp:TextBox>
-                    <asp:TextBox type="password" class="form-control password" placeholder="Senha" ID="TextBox2" runat="server"></asp:TextBox>
+                    <asp:TextBox class="form-control email" placeholder="Digite o Login" ID="loginTextBox" runat="server"></asp:TextBox>
+                    <asp:TextBox type="password" class="form-control password" placeholder="Senha" ID="senhaTextBox" runat="server"></asp:TextBox>
 
   
                     
@@ -33,9 +33,12 @@
                         Lembrar me
 				
                     </label>
-                    <asp:Button class="btn btn-block btn-lg btn-success submit" ID="Button1" runat="server" Text="Button" />
+                    <asp:Button class="btn btn-block btn-lg btn-success submit" ID="Button1" runat="server" Text="Entrar" OnClick="Button1_Click" />
                     <a href="#" class="btn btn-sm btn-primary register">Registrar</a>
                     <a href="#" class="btn btn-sm btn-default forgot">Esqueceu sua senha??</a>
+                    <label class="checkbox-inline">
+                        <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+                    </label>
                 </div>
 
             </div>

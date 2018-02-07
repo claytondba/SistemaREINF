@@ -76,6 +76,7 @@
     <Compile Include="SysTriggerParamDAL.cs" />
     <Compile Include="Sys_filterDAL.cs" />
     <Compile Include="UsuariosDAL.cs" />
+    <Compile Include="UsuariosReinfDAL.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
