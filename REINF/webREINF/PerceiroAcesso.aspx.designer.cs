@@ -13,6 +13,15 @@ namespace webREINF {
     public partial class PerceiroAcesso {
         
         /// <summary>
+        /// Controle infoLabel.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label infoLabel;
+        
+        /// <summary>
         /// Controle senhaTextBox.
         /// </summary>
         /// <remarks>
@@ -31,12 +40,12 @@ namespace webREINF {
         protected global::System.Web.UI.WebControls.TextBox senhaTextBox2;
         
         /// <summary>
-        /// Controle labelSenha.
+        /// Controle Button1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelSenha;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

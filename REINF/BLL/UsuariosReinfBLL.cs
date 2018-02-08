@@ -18,5 +18,9 @@ namespace BLL
         {
             return new UsuariosReinfDAL().LogarGetUser(login, senha);
         }
+        public bool AtualizaPrimeiroAcesso(UsuariosReinfModel usu, string senha)
+        {
+            return new UsuariosReinfDAL().AtualizaPrimeiroAcesso(usu, senha);
+        }
     }
 }

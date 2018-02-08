@@ -23,6 +23,7 @@ namespace Model
         public string email { get; set; }
         public string telefone { get; set; }
         public bool primeiro_acesso { get; set; }
+        public string login { get; set; }
 
     }
 }

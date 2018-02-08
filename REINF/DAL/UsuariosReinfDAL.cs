@@ -21,6 +21,15 @@ namespace DAL
             this.CustomWhere = string.Format("login ='{0}' and senha =md5('{1}')", login, senha);
             return this.FrameworkGet(new UsuariosReinfModel()).First();
         }
+        public bool AtualizaPrimeiroAcesso(UsuariosReinfModel usu, string senha)
+        {
+            string sql = string.Format(
+                "update usuarios_reinf set senha =md5('{0}'), primeiro_acesso = false where id={1}",
+                usu.id, senha);
+
+            return Postgres.ConnectionManager.update(sql);
+
+        }
     }
 
 }
