@@ -25,7 +25,7 @@ namespace DAL
         {
             string sql = string.Format(
                 "update usuarios_reinf set senha =md5('{0}'), primeiro_acesso = false where id={1}",
-                usu.id, senha);
+                senha, usu.id);
 
             return Postgres.ConnectionManager.update(sql);
 

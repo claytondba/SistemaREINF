@@ -46,11 +46,11 @@
                 <asp:TextBox type="password" CssClass="txt" placeholder="Senha" ID="senhaTextBox2" runat="server"></asp:TextBox>
             </div>
         </div>
-  
+        <br />
         <div class="row">
-            <asp:Button ID="Button1" runat="server" Text="Cadastrar" OnClick="Button1_Click" />
+            <div class="col-sm-12">
+                <asp:Button ID="Button1" runat="server" Text="Cadastrar" OnClick="Button1_Click" />
+            </div>
         </div>
-
-
     </div>
 </asp:Content>

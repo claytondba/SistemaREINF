@@ -63,6 +63,7 @@ input[type=checkbox] {
     background-color: #ffffcc;
     border-left: 6px solid #ffeb3b;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -127,3 +128,69 @@ input[type=submit] {
         margin-top: 0;
     }
 }
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.sidenav {
+    height: 90%;
+    width: 165px;
+    position: fixed;
+    z-index: 1;
+    top: 60px;
+    left: 4px;
+    background-color: #333;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+    .sidenav a {
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+.main {
+    margin-left: 130px; /* Same as the width of the sidenav */
+    /*font-size: 28px; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav a {
+            font-size: 18px;
+        }
+}
+
+
+.vertical-menu {
+    width: 200px; /* Set a width if you like */
+}
+
+    .vertical-menu a {
+        background-color: #eee; /* Grey background color */
+        color: black; /* Black text color */
+        display: block; /* Make the links appear below each other */
+        padding: 12px; /* Add some padding */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+        .vertical-menu a:hover {
+            background-color: #ccc; /* Dark grey background on mouse-over */
+        }
+
+        .vertical-menu a.active {
+            background-color: #4CAF50; /* Add a green color to the "active/current" link */
+            color: white;
+        }
