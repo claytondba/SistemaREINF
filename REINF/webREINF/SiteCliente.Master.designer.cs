@@ -10,7 +10,7 @@
 namespace webREINF {
     
     
-    public partial class SiteParceiro {
+    public partial class SiteCliente {
         
         /// <summary>
         /// Controle head.

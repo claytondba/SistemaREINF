@@ -23,6 +23,8 @@ namespace webREINF
         protected void Session_Start(object sender, EventArgs e)
         {
             Session.Add("usuario", null);
+            Session.Add("active_page", null);
+            Session.Timeout = 5;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)
@@ -42,7 +44,10 @@ namespace webREINF
 
         protected void Session_End(object sender, EventArgs e)
         {
-
+            Session["usuario"] = null;
+            Session["active_page"] = null;
+            Session.Clear();
+            //Response.Redirect("Login.aspx");
         }
 
         protected void Application_End(object sender, EventArgs e)

@@ -150,7 +150,7 @@ namespace DAL.Framework
                 foreach (string s in _fields)
                 {
                     _count++;
-                    sb.Append("`" + s + "`");
+                    sb.Append(" " + s + " ");
                     if (_count != _fields.Count)
                         sb.Append(", ");
                 }

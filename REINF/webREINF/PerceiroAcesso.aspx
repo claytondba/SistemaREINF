@@ -29,7 +29,6 @@
     </div>
     <br />
     <div class="container">
-
         <div class="row">
             <div class="col-25">
                 <label for="fname" class="col-auto">Nova Senha</label>

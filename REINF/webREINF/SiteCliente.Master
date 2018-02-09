@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteParceiro.master.cs" Inherits="webREINF.SiteParceiro" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteCliente.master.cs" Inherits="webREINF.SiteCliente" %>
 
 <!DOCTYPE html>
 
@@ -15,8 +15,8 @@
     <form id="form1" runat="server">
 
         <div class="topnav">
-            <a class="active" href="HomeParceiro.aspx">Home</a>
-            <a href="CadastroCliente.aspx">Clientes</a>
+            <a class="active" href="#home">Home</a>
+            <a href="#news">Clientes</a>
             <a href="#contact">Relatórios</a>
             <a href="#config">Configurações</a>
             <a href="#about">Ajuda</a>

@@ -24,6 +24,8 @@ namespace Model
         public string telefone { get; set; }
         public bool primeiro_acesso { get; set; }
         public string login { get; set; }
+        public string cnpj { get; set; }
+        public bool parceiro { get; set; }
 
     }
 }

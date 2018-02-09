@@ -15,6 +15,8 @@ namespace webREINF
         {
             if (!Page.IsPostBack)
                 infoLabel.Text = "Você precisa cadastrar uma nova senha para continuar.";
+
+            Session["active_page"] = "";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
