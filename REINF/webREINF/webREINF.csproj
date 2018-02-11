@@ -131,12 +131,14 @@
   <ItemGroup>
     <Content Include="CadastroCliente.aspx" />
     <Content Include="ClienteAcesso.aspx" />
+    <Content Include="ConsultaClientes.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-reboot.css" />
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Grid.css" />
     <Content Include="Content\Login.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\SiteParceiro.css" />
@@ -229,6 +231,13 @@
     </Compile>
     <Compile Include="ClienteAcesso.aspx.designer.cs">
       <DependentUpon>ClienteAcesso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaClientes.aspx.cs">
+      <DependentUpon>ConsultaClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConsultaClientes.aspx.designer.cs">
+      <DependentUpon>ConsultaClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -37,8 +37,10 @@ namespace webREINF
             usu.parceiro = false;
             usu.login = loginTextBox.Text;
             usu.senha = "12345";
-
+            usu.data_cadastro = DateTime.Now;
             new UsuariosReinfBLL().FInsert(usu);
+
+            Response.Redirect("CadastroCliente.aspx");
         }
     }
 }

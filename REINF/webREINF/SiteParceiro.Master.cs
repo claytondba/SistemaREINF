@@ -45,14 +45,14 @@ namespace webREINF
             {
                 if (Session["active_page"].ToString() == "cadastro_cliente")
                 {
-                    Literal1.Text = "<a href= \"#about\">Cadastrar</a>" +
-                                    "<a href= \"#services\">Consultar</a> " +
+                    Literal1.Text = "<a href= \"CadastroCliente.aspx\">Cadastrar</a>" +
+                                    "<a href= \"ConsultaClientes.aspx\">Consultar</a> " +
                                     "<a href= \"#clients\">Últimos Envios</a> " +
                                     "<a href= \"#contact\">Configurações</a> ";
                 }
                 else if (Session["active_page"].ToString() == "home_parceiro")
                 {
-                    Literal1.Text = "<a href= \"#about\">Clientes</a>" +
+                    Literal1.Text = "<a href= \"CadastroCliente.aspx\">Clientes</a>" +
                                     "<a href= \"#services\">Relatórios</a> " +
                                     "<a href= \"#clients\">Configurações</a> " +
                                     "<a href= \"#contact\">Ajuda</a> ";

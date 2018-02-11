@@ -26,6 +26,7 @@ namespace Model
         public string login { get; set; }
         public string cnpj { get; set; }
         public bool parceiro { get; set; }
+        public int cadastrante { get; set; }
 
     }
 }
