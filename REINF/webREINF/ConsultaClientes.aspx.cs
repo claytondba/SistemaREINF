@@ -28,5 +28,34 @@ namespace webREINF
             }
             
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["edit_usuario"] = null;
+            string key = GridView1.SelectedRow.Cells[0].Text;
+            Session["edit_usuario"] = new UsuariosReinfBLL().FGetCustom(string.Format(string.Format("id ={0}", key))).First();
+            Session["edit_reg"] = true;
+
+            Response.Redirect("CadastroCliente.aspx");
+        }
+
+        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+            if(e.CommandName == "Delete")
+            {
+                string key = e.CommandSource.ToString();
+            }
+            else if(e.CommandName =="excluir")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = GridView1.Rows[index];
+                string key = row.Cells[0].Text;
+                UsuariosReinfBLL usuBll = new UsuariosReinfBLL();
+                UsuariosReinfModel usu = usuBll.FGetCustom(string.Format(string.Format("id ={0}", key))).First();
+
+                usuBll.FrameworkDelete(usu);
+                Response.Redirect("ConsultaClientes.aspx");
+            }
+        }
     }
 }

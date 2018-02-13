@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArquivosDAL.cs" />
     <Compile Include="ConnectionManager.cs" />
     <Compile Include="FieldDAL.cs" />
     <Compile Include="FormularioDAL.cs" />

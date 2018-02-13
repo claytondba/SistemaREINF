@@ -10,9 +10,7 @@
     <br />
     <div class="container">
         <h2>Incluir novo acesso de Cliente</h2>
-        <p>Inclusão de cliente para acesso no sistema.</p>
     </div>
-    <br />
     <div class="container">
         <div class="row">
             <div class="col-25">
@@ -27,7 +25,7 @@
                 <label for="lname" class="col-auto">Razão Social</label>
             </div>
             <div class="col-75">
-                <asp:TextBox type="text" CssClass="txt" placeholder="Zazão" ID="razaoTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox type="text" CssClass="txt" placeholder="Nome da Empresa" ID="razaoTextBox" runat="server"></asp:TextBox>
             </div>
         </div>
         <div class="row">
@@ -43,7 +41,7 @@
                 <label for="lname" class="col-auto">CNPJ</label>
             </div>
             <div class="col-75">
-                <asp:TextBox type="text" CssClass="txt" placeholder="" ID="cnpjTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox type="text" CssClass="txt" placeholder="99.999.999/9999-99" ID="cnpjTextBox" runat="server"></asp:TextBox>
             </div>
         </div>
         <div class="row">
@@ -60,6 +58,14 @@
             </div>
             <div class="col-75">
                 <asp:TextBox type="text" CssClass="txt" placeholder="Login para Acesso" ID="loginTextBox" runat="server"></asp:TextBox>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname" class="col-auto">Ativado?</label>
+            </div>
+            <div class="col-75">
+                <asp:CheckBox ID="CheckBox1" runat="server" Text="Ativado?" />
             </div>
         </div>
         <div class="row">

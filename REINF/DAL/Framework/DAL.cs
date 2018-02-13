@@ -325,7 +325,7 @@ namespace DAL.Framework
                 foreach (string s in _fields)
                 {
                     _count++;
-                    sb.Append(String.Format("`{0}`=@{0}", s));
+                    sb.Append(String.Format("{0}=@{0}", s));
                     if (_count != _fields.Count)
                         sb.Append(", ");
                 }

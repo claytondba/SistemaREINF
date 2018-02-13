@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArquivosBLL.cs" />
     <Compile Include="Framework\BLL.cs" />
     <Compile Include="Framework\IBLL.cs" />
     <Compile Include="Framework\UsuarioModel.cs" />
