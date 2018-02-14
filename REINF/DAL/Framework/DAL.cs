@@ -779,7 +779,15 @@ namespace DAL.Framework
                             if (_tp == typeof(System.Byte[]))
                             {
                                 PropertyInfo p = _p.GetType().GetProperty(s);
-                                p.SetValue(_p, System.Text.ASCIIEncoding.Default.GetString((Byte[])dr[s]), null);
+                                try
+                                {
+                                    p.SetValue(_p, System.Text.ASCIIEncoding.Default.GetString((Byte[])dr[s]), null);
+                                }
+                                catch (Exception)
+                                {
+                                    p.SetValue(_p, (Byte[])dr[s], null);
+                                }
+                                
                             }
                             else if (_tp == typeof(System.UInt32))
                             {

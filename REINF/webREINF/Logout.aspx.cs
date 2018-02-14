@@ -7,11 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace webREINF
 {
-    public partial class HomeCliente : System.Web.UI.Page
+    public partial class Logout : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["active_page"] = "home_parceiro";
+            Session["usuario"] = null;
+            Session["active_page"] = null;
+            Session.Clear();
+            Response.Redirect("Login.aspx");
         }
     }
 }

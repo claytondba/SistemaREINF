@@ -15,11 +15,12 @@
     <form id="form1" runat="server">
 
         <div class="topnav">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">Clientes</a>
+            <a class="active" href="HomeCliente.aspx">Home</a>
+            <a href="ArquivosClientes.aspx">Meus Arquivos</a>
             <a href="#contact">Relatórios</a>
-            <a href="#config">Configurações</a>
+            <a href="ConfiguraCliente.aspx">Configurações</a>
             <a href="#about">Ajuda</a>
+            <a class="active" href="Logout.aspx">Logout</a>
         </div>
         <div class="sidenav">
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>

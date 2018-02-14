@@ -21,5 +21,7 @@ namespace Model
         public int tipo_evento { get; set; }
         public string envio_xml { get; set; }
         public string resposta_rfb { get; set; }
+        public DateTime data_evento { get; set; }
+        public string status { get; set; }
     }
 }

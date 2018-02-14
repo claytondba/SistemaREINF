@@ -20,6 +20,7 @@
             <a href="#contact">Relatórios</a>
             <a href="#config">Configurações</a>
             <a href="#about">Ajuda</a>
+            <a class="active" href="Logout.aspx">Logout</a>
         </div>
         <div class="sidenav">
             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
