@@ -1,0 +1,29 @@
+-- Table: public.usuarios_reinf
+
+-- DROP TABLE public.usuarios_reinf;
+
+CREATE TABLE public.usuarios_reinf
+(
+  id integer NOT NULL DEFAULT nextval('usuarios_id_seq'::regclass),
+  nome character varying(150),
+  senha character varying(150),
+  data_cadastro timestamp without time zone,
+  ativo boolean,
+  razao_social character varying(150),
+  email character varying(150),
+  telefone character varying(20),
+  primeiro_acesso boolean,
+  login character varying(50),
+  parceiro boolean, -- 1- Parceiro, 0 -Cliente
+  cnpj character varying(14),
+  cadastrante integer,
+  CONSTRAINT pk_cliente PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.usuarios_reinf
+  OWNER TO postgres;
+COMMENT ON TABLE public.usuarios_reinf
+  IS 'Tabela de usuários (Parceiros/Clientes)';
+COMMENT ON COLUMN public.usuarios_reinf.parceiro IS '1- Parceiro, 0 -Cliente';

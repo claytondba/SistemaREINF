@@ -153,6 +153,7 @@
     <Content Include="Global.asax" />
     <Content Include="HomeCliente.aspx" />
     <Content Include="HomeParceiro.aspx" />
+    <Content Include="image\download.png" />
     <Content Include="image\logo_grupocandinho.gif" />
     <Content Include="image\pencil16.png" />
     <Content Include="image\pencil.png" />

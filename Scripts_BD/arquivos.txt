@@ -1,0 +1,27 @@
+-- Table: public.arquivos
+
+-- DROP TABLE public.arquivos;
+
+CREATE TABLE public.arquivos
+(
+  id integer NOT NULL DEFAULT nextval('arquivos_id_seq'::regclass),
+  id_parceiro integer,
+  id_cliente integer,
+  arquivo_xls bytea,
+  tipo_evento integer,
+  envio_xml text,
+  resposta_rfb text,
+  data_evento timestamp without time zone,
+  status character varying(1), -- P - Pendente...
+  nome_arquivo character varying(250),
+  CONSTRAINT pk_arquivos PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.arquivos
+  OWNER TO postgres;
+COMMENT ON COLUMN public.arquivos.status IS 'P - Pendente
+E- Erro na Estrutura
+A - Autorizado para Envio';
+

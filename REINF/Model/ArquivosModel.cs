@@ -23,5 +23,6 @@ namespace Model
         public string resposta_rfb { get; set; }
         public DateTime data_evento { get; set; }
         public string status { get; set; }
+        public string nome_arquivo { get; set; }
     }
 }

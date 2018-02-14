@@ -36,7 +36,7 @@
                 <asp:BoundField DataField="id" HeaderText="ID do Envio" />
                 <asp:BoundField DataField="data_evento" HeaderText="Data do Evento" />
                 <asp:BoundField DataField="status" HeaderText="Status" />
-                <asp:CommandField ShowSelectButton="True" ButtonType="Image" SelectImageUrl="~/image/pencil16.png" />
+                <asp:CommandField ShowSelectButton="True" ButtonType="Image" SelectImageUrl="~/image/download.png" />
                 <asp:ButtonField ButtonType="Image" CommandName="excluir" ImageUrl="~/image/delete.png" Text="Botão" />
             </Columns>
         </asp:GridView>

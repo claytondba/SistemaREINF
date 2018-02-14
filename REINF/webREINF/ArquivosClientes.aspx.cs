@@ -14,7 +14,7 @@ namespace webREINF
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!Page.IsPostBack)
+            if (!Page.IsPostBack)
             {
                 if (Session["usuario"] == null)
                     Response.Redirect("Login.aspx");
@@ -93,14 +93,30 @@ namespace webREINF
                 ArquivosBLL arqBll = new ArquivosBLL();
                 ArquivosModel arquivo = arqBll.FGetCustom(string.Format(string.Format("id ={0}", key))).First();
 
-                if(arquivo.status != "P")
+                if (arquivo.status != "P")
                 {
                     erroGridLabel.Text = "Esse arquivo já foi processsado, impossível remover!";
                     return;
                 }
-                
+
                 arqBll.FrameworkDelete(arquivo);
                 Response.Redirect("ArquivosClientes.aspx");
+            }
+            else if (e.CommandName == "Select")
+            {
+
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = GridView1.Rows[index];
+                string key = row.Cells[0].Text;
+                ArquivosBLL arqBll = new ArquivosBLL();
+                ArquivosModel arquivo = arqBll.FGetCustom(string.Format(string.Format("id ={0}", key))).First();
+
+                Response.Clear();
+                Response.AddHeader("Content-Disposition", "attachment; filename=" + "saksja.xls");
+                Response.AddHeader("Content-Length", arquivo.arquivo_xls.Length.ToString());
+                Response.ContentType = "application/vnd.ms-excel";
+                Response.BinaryWrite(arquivo.arquivo_xls);
+                Response.End();
             }
         }
     }
