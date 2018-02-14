@@ -26,6 +26,7 @@ namespace webREINF
             Session.Add("active_page", null);
             Session.Add("edit_reg", false);
             Session.Add("edit_usuario", false);
+            Session.Add("id_cliente", null);
             Session.Timeout = 5;
         }
 

@@ -67,6 +67,15 @@ namespace webREINF {
         protected global::System.Web.UI.WebControls.TextBox loginTextBox;
         
         /// <summary>
+        /// Controle senhaTextBox.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox senhaTextBox;
+        
+        /// <summary>
         /// Controle CheckBox1.
         /// </summary>
         /// <remarks>

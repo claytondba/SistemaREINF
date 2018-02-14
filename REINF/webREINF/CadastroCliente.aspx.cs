@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -34,7 +36,21 @@ namespace webREINF
             }
             
         }
+        public static string GerarHashMd5(string input)
+        {
+            MD5 md5Hash = MD5.Create();
 
+            byte[] data = md5Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            StringBuilder sBuilder = new StringBuilder();
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            return sBuilder.ToString();
+        }
         protected void Button1_Click(object sender, EventArgs e)
         {
             //if(string.IsNullOrEmpty(nomeTextBox.Text))
@@ -53,7 +69,7 @@ namespace webREINF
 
                 //usu.parceiro = false;
                 usu.login = loginTextBox.Text;
-                //usu.senha = "12345";
+                usu.senha = GerarHashMd5(senhaTextBox.Text);
                 //usu.data_cadastro = DateTime.Now;
                 new UsuariosReinfBLL().FrameworkUpdate(usu);
                 Session["edit_reg"] = false;
@@ -74,9 +90,11 @@ namespace webREINF
 
                 usu.parceiro = false;
                 usu.login = loginTextBox.Text;
-                usu.senha = "12345";
+                usu.senha = GerarHashMd5(senhaTextBox.Text);
                 usu.data_cadastro = DateTime.Now;
                 new UsuariosReinfBLL().FInsert(usu);
+
+                //new UsuariosReinfBLL().AtualizaSenha(usu, "Candinho2018");
 
                 Response.Redirect("CadastroCliente.aspx");
             }

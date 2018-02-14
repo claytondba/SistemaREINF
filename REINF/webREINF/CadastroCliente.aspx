@@ -62,6 +62,14 @@
         </div>
         <div class="row">
             <div class="col-25">
+                <label for="lname" class="col-auto">Senha Inicial</label>
+            </div>
+            <div class="col-75">
+                <asp:TextBox type="password" CssClass="txt" placeholder="*Será alterada no primeiro acesso" ID="senhaTextBox" runat="server"></asp:TextBox>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
                 <label for="lname" class="col-auto">Ativado?</label>
             </div>
             <div class="col-75">

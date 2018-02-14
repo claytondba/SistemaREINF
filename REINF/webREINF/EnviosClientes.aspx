@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteCliente.Master" AutoEventWireup="true" CodeBehind="ArquivosClientes.aspx.cs" Inherits="webREINF.ArquivosClientes" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteParceiro.Master" AutoEventWireup="true" CodeBehind="EnviosClientes.aspx.cs" Inherits="webREINF.EnviosClientes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="Content/bootstrap.min.css" rel="stylesheet" />
@@ -11,23 +11,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
     <div class="container">
-        <h2>Upload de Arquivos .xls</h2>
-        <p>Upload para validação em parceiros credenciados</p>
-
-        <div class="row">
-            <div class="col-25">
-                <asp:FileUpload ID="FileUpload1" CssClass="input-group" runat="server" />
-
-            </div>
-        </div>
-        <div>
-            <div class="col-75">
-                <asp:Button ID="Button1" runat="server" Text="Enviar Arquivo" OnClick="Button1_Click" />
-                <asp:Label ID="errorLabel" runat="server"></asp:Label>
-            </div>
-        </div>
-
-        <br />
+        <h2>Arquivos Enviados - <asp:Label ID="Label1" runat="server" Text=""></asp:Label></h2>
+        <p>Arquivos enviados para processamento de parceiro</p>
     </div>
 
     <div class="container">
@@ -38,7 +23,6 @@
                 <asp:BoundField DataField="data_evento" HeaderText="Data do Evento" />
                 <asp:BoundField DataField="status" HeaderText="Status" />
                 <asp:CommandField ShowSelectButton="True" ButtonType="Image" SelectImageUrl="~/image/download.png" />
-                <asp:ButtonField ButtonType="Image" CommandName="excluir" ImageUrl="~/image/delete.png" Text="Botão" />
             </Columns>
         </asp:GridView>
         <asp:Label ID="erroGridLabel" runat="server"></asp:Label>

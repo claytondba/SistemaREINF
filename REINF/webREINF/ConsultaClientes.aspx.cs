@@ -25,6 +25,9 @@ namespace webREINF
                 usuBll.FGetCustom(string.Format(string.Format("cadastrante ={0}", usu.id)));
 
                 GridView1.DataBind();
+
+                Session["edit_reg"] = false;
+                Session["edit_usuario"] = null;
             }
             
         }
@@ -55,6 +58,20 @@ namespace webREINF
 
                 usuBll.FrameworkDelete(usu);
                 Response.Redirect("ConsultaClientes.aspx");
+
+            }
+            else if (e.CommandName == "download")
+            {
+                int index = Convert.ToInt32(e.CommandArgument);
+                GridViewRow row = GridView1.Rows[index];
+                string key = row.Cells[0].Text;
+                UsuariosReinfBLL usuBll = new UsuariosReinfBLL();
+                UsuariosReinfModel usu = usuBll.FGetCustom(string.Format(string.Format("id ={0}", key))).First();
+
+                Session["id_cliente"] = usu.id;
+
+                Response.Redirect("EnviosClientes.aspx");
+
             }
         }
     }

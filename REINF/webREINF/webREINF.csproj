@@ -146,6 +146,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Content\SiteParceiro.css" />
     <Content Include="EnviarArquivo.aspx" />
+    <Content Include="EnviosClientes.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -275,6 +276,13 @@
     </Compile>
     <Compile Include="EnviarArquivo.aspx.designer.cs">
       <DependentUpon>EnviarArquivo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EnviosClientes.aspx.cs">
+      <DependentUpon>EnviosClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EnviosClientes.aspx.designer.cs">
+      <DependentUpon>EnviosClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

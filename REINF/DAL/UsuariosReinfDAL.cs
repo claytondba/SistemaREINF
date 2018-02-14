@@ -30,6 +30,15 @@ namespace DAL
             return Postgres.ConnectionManager.update(sql);
 
         }
+        public bool AtualizaSenha(UsuariosReinfModel usu, string senha)
+        {
+            string sql = string.Format(
+                "update usuarios_reinf set senha =md5('{0}') where id={1}",
+                senha, usu.id);
+
+            return Postgres.ConnectionManager.update(sql);
+
+        }
     }
 
 }

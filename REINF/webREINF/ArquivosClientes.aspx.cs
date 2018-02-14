@@ -72,7 +72,7 @@ namespace webREINF
                 arquivo.tipo_evento = 1;
                 arquivo.resposta_rfb = "";
                 arquivo.envio_xml = "";
-
+                arquivo.nome_arquivo = FileUpload1.FileName;
                 ArquivosBLL aBll = new ArquivosBLL();
 
                 aBll.FInsert(arquivo);
@@ -112,7 +112,7 @@ namespace webREINF
                 ArquivosModel arquivo = arqBll.FGetCustom(string.Format(string.Format("id ={0}", key))).First();
 
                 Response.Clear();
-                Response.AddHeader("Content-Disposition", "attachment; filename=" + "saksja.xls");
+                Response.AddHeader("Content-Disposition", "attachment; filename=" + arquivo.nome_arquivo);
                 Response.AddHeader("Content-Length", arquivo.arquivo_xls.Length.ToString());
                 Response.ContentType = "application/vnd.ms-excel";
                 Response.BinaryWrite(arquivo.arquivo_xls);

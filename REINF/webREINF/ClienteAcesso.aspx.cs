@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,23 @@ namespace webREINF
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["active_page"] = "";
+        }
 
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            if (senhaTextBox.Text != senhaTextBox2.Text)
+            {
+                //infoLabel.Text = "Senhas informadas não conferem!!";
+                return;
+            }
+
+            UsuariosReinfModel usuario = (UsuariosReinfModel)Session["usuario"];
+            UsuariosReinfBLL usuBll = new UsuariosReinfBLL();
+
+            usuBll.AtualizaPrimeiroAcesso(usuario, senhaTextBox.Text);
+
+            Response.Redirect("HomeCliente.aspx");
         }
     }
 }
