@@ -51,16 +51,16 @@ namespace webREINF
                 else if (Session["active_page"].ToString() == "cliente_configura")
                 {
                     Literal1.Text = "<a href= \"ArquivosClientes\">Meus Arquivos</a>" +
-                                    "<a href= \"#services\">Relatórios</a> " +
+                                    "<a href= \"RelatoriosClientes.aspx\">Relatórios</a> " +
                                     "<a href= \"ConfiguraCliente.aspx\">Configurações</a> " +
-                                    "<a href= \"#contact\">Ajuda</a> ";
+                                    "<a href= \"AjudaCliente.aspx\">Ajuda</a> ";
                 }
                 else
                 {
                     Literal1.Text = "<a href= \"ArquivosClientes\">Meus Arquivos</a>" +
-                                    "<a href= \"#services\">Relatórios</a> " +
+                                    "<a href= \"RelatoriosClientes.aspx\">Relatórios</a> " +
                                     "<a href= \"ConfiguraCliente.aspx\">Configurações</a> " +
-                                    "<a href= \"#contact\">Ajuda</a> ";
+                                    "<a href= \"AjudaCliente.aspx\">Ajuda</a> ";
                 }
             }
         }

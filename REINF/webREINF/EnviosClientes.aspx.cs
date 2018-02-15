@@ -28,6 +28,10 @@ namespace webREINF
                 usuBll.FGetCustom(string.Format(string.Format("id_cliente ={0}", (int)Session["id_cliente"])));
 
                 GridView1.DataBind();
+                
+
+                UsuariosReinfModel usuCli = new UsuariosReinfBLL().FGetCustom(string.Format("id ={0}", (int)Session["id_cliente"])).First();
+                Label1.Text = usuCli.razao_social;
                 Session["id_cliente"] = null;
 
             }

@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArquivosModel.cs" />
+    <Compile Include="ConfigModel.cs" />
     <Compile Include="FieldsModel.cs" />
     <Compile Include="FormularioModel.cs" />
     <Compile Include="Framework\IDAL.cs" />

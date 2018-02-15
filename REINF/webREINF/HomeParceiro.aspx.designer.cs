@@ -13,21 +13,21 @@ namespace webREINF {
     public partial class HomeParceiro {
         
         /// <summary>
-        /// Controle empresaTextBox.
+        /// Controle titleLabel.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox empresaTextBox;
+        protected global::System.Web.UI.WebControls.Label titleLabel;
         
         /// <summary>
-        /// Controle usuarioTextBox.
+        /// Controle Literal1.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox usuarioTextBox;
+        protected global::System.Web.UI.WebControls.Literal Literal1;
     }
 }

@@ -129,11 +129,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AjudaCliente.aspx" />
+    <Content Include="AjudaParceiro.aspx" />
     <Content Include="ArquivosClientes.aspx" />
     <Content Include="CadastroCliente.aspx" />
     <Content Include="ClienteAcesso.aspx" />
     <Content Include="ClienteEnvios.aspx" />
     <Content Include="ConfiguraCliente.aspx" />
+    <Content Include="ConfiguraParceiro.aspx" />
     <Content Include="ConsultaClientes.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
@@ -155,13 +158,15 @@
     <Content Include="HomeCliente.aspx" />
     <Content Include="HomeParceiro.aspx" />
     <Content Include="image\download.png" />
-    <Content Include="image\logo_grupocandinho.gif" />
+    <Content Include="image\grupo.png" />
     <Content Include="image\pencil16.png" />
     <Content Include="image\pencil.png" />
     <Content Include="image\delete.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="PerceiroAcesso.aspx" />
+    <Content Include="RelatoriosClientes.aspx" />
+    <Content Include="RelatoriosParceiros.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -184,11 +189,13 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.js" />
     <Content Include="Scripts\jquery-3.0.0.slim.min.js" />
+    <Content Include="Scripts\Mascara.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\popper-utils.js" />
     <Content Include="Scripts\popper-utils.min.js" />
@@ -221,11 +228,26 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="UltimosEnvios.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AjudaCliente.aspx.cs">
+      <DependentUpon>AjudaCliente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjudaCliente.aspx.designer.cs">
+      <DependentUpon>AjudaCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AjudaParceiro.aspx.cs">
+      <DependentUpon>AjudaParceiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AjudaParceiro.aspx.designer.cs">
+      <DependentUpon>AjudaParceiro.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="ArquivosClientes.aspx.cs">
@@ -262,6 +284,13 @@
     </Compile>
     <Compile Include="ConfiguraCliente.aspx.designer.cs">
       <DependentUpon>ConfiguraCliente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfiguraParceiro.aspx.cs">
+      <DependentUpon>ConfiguraParceiro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfiguraParceiro.aspx.designer.cs">
+      <DependentUpon>ConfiguraParceiro.aspx</DependentUpon>
     </Compile>
     <Compile Include="ConsultaClientes.aspx.cs">
       <DependentUpon>ConsultaClientes.aspx</DependentUpon>
@@ -323,6 +352,20 @@
       <DependentUpon>PerceiroAcesso.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RelatoriosClientes.aspx.cs">
+      <DependentUpon>RelatoriosClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatoriosClientes.aspx.designer.cs">
+      <DependentUpon>RelatoriosClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RelatoriosParceiros.aspx.cs">
+      <DependentUpon>RelatoriosParceiros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RelatoriosParceiros.aspx.designer.cs">
+      <DependentUpon>RelatoriosParceiros.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SiteCliente.Master.cs">
       <DependentUpon>SiteCliente.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -336,6 +379,13 @@
     </Compile>
     <Compile Include="SiteParceiro.Master.designer.cs">
       <DependentUpon>SiteParceiro.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UltimosEnvios.aspx.cs">
+      <DependentUpon>UltimosEnvios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UltimosEnvios.aspx.designer.cs">
+      <DependentUpon>UltimosEnvios.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

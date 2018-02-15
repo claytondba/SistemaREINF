@@ -749,7 +749,7 @@ namespace DAL.Framework
                     //Todas consultas enviadas sem clausula where tem pagina máxima de 100 registros.
                     _sql += " order by " + _entityAlias + "." + classModule.FieldRecno + " desc limit 100";
                 }
-                dt = MySql.ConnectionManager.consultaDt(_sql);
+                dt = Postgres.ConnectionManager.consultaDt(_sql);
             }
 
             DataTableReader dr = new DataTableReader(dt);
@@ -892,7 +892,7 @@ namespace DAL.Framework
                         break;
                 }
 
-                return MySql.ConnectionManager.executeScalar(sb.ToString()).ToString();
+                return Postgres.ConnectionManager.executeScalar(sb.ToString()).ToString();
             }
             catch (Exception ex)
             {

@@ -19,19 +19,22 @@ namespace webREINF
             {
                 Session["active_page"] = "cadastro_cliente";
 
-                if((bool)Session["edit_reg"])
+                if (Session["edit_reg"] != null)
                 {
-                    UsuariosReinfModel usu = (UsuariosReinfModel)Session["edit_usuario"];
+                    if ((bool)Session["edit_reg"])
+                    {
+                        UsuariosReinfModel usu = (UsuariosReinfModel)Session["edit_usuario"];
 
-                    nomeTextBox.Text = usu.nome;
-                    razaoTextBox.Text = usu.razao_social;
-                    cnpjTextBox.Text = usu.cnpj;
-                    emailTextBox.Text = usu.email;
-                    telefoneTextBox.Text = usu.telefone;
-                    loginTextBox.Text = usu.login;
-                    CheckBox1.Checked = usu.ativo;
+                        nomeTextBox.Text = usu.nome;
+                        razaoTextBox.Text = usu.razao_social;
+                        cnpjTextBox.Text = usu.cnpj;
+                        emailTextBox.Text = usu.email;
+                        telefoneTextBox.Text = usu.telefone;
+                        loginTextBox.Text = usu.login;
+                        CheckBox1.Checked = usu.ativo;
 
-                    Button1.Text = "Atualizar";
+                        Button1.Text = "Atualizar";
+                    }
                 }
             }
             
@@ -63,9 +66,9 @@ namespace webREINF
                 usu.razao_social = razaoTextBox.Text;
                 //usu.primeiro_acesso = true;
                 usu.ativo = CheckBox1.Checked;
-                usu.cnpj = cnpjTextBox.Text;
+                usu.cnpj = cnpjTextBox.Text.Replace(".", "").Replace("/", "").Replace("-", "");
                 usu.email = emailTextBox.Text;
-                usu.telefone = telefoneTextBox.Text;
+                usu.telefone = telefoneTextBox.Text.Replace("(", "").Replace(")", "").Replace("-", "").Replace(" ", "");
 
                 //usu.parceiro = false;
                 usu.login = loginTextBox.Text;
@@ -84,9 +87,9 @@ namespace webREINF
                 usu.razao_social = razaoTextBox.Text;
                 usu.primeiro_acesso = true;
                 usu.ativo = CheckBox1.Checked;
-                usu.cnpj = cnpjTextBox.Text;
+                usu.cnpj = cnpjTextBox.Text.Replace(".", "").Replace("/", "").Replace("-", "");
                 usu.email = emailTextBox.Text;
-                usu.telefone = telefoneTextBox.Text;
+                usu.telefone = telefoneTextBox.Text.Replace("(","").Replace(")","").Replace("-","").Replace(" ","");
 
                 usu.parceiro = false;
                 usu.login = loginTextBox.Text;
@@ -98,6 +101,11 @@ namespace webREINF
 
                 Response.Redirect("CadastroCliente.aspx");
             }
+        }
+
+        protected void cnpjTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

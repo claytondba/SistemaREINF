@@ -16,7 +16,8 @@ namespace webREINF
         {
             if (!Page.IsPostBack)
             {
-                if(Session["usuario"] != null)
+
+                if (Session["usuario"] != null)
                 {
                     UsuariosReinfModel usuario = (UsuariosReinfModel)Session["usuario"];
                     if (usuario.parceiro)
@@ -34,8 +35,11 @@ namespace webREINF
                             Response.Redirect("HomeCliente.aspx", true);
                     }
                 }
-                new SessionBLL().Connect();
+                else
+                    new SessionBLL().Connect();
+
             }
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -56,7 +60,7 @@ namespace webREINF
                     else
                     {
                         Session["active_page"] = "home_parceiro";
-                        Response.Redirect("HomeParceiro.aspx", true);                       
+                        Response.Redirect("HomeParceiro.aspx", true);
                     }
                 }
                 else
@@ -66,7 +70,7 @@ namespace webREINF
                     else
                     {
                         Session["active_page"] = "home_cliente";
-                        Response.Redirect("HomeCliente.aspx", true);                      
+                        Response.Redirect("HomeCliente.aspx", true);
                     }
                 }
 

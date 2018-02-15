@@ -1,0 +1,18 @@
+-- Table: public.config
+
+-- DROP TABLE public.config;
+
+CREATE TABLE public.config
+(
+  id integer NOT NULL DEFAULT nextval('config_id_seq'::regclass),
+  home_cliente_title character varying(250),
+  home_cliente_info character varying(700),
+  home_parceiro_title character varying(250),
+  home_parceiro_info character varying(700),
+  CONSTRAINT pk_config PRIMARY KEY (id)
+)
+WITH (
+  OIDS=FALSE
+);
+ALTER TABLE public.config
+  OWNER TO postgres;

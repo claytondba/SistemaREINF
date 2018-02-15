@@ -47,15 +47,16 @@ namespace webREINF
                 {
                     Literal1.Text = "<a href= \"CadastroCliente.aspx\">Cadastrar</a>" +
                                     "<a href= \"ConsultaClientes.aspx\">Consultar</a> " +
-                                    "<a href= \"#clients\">Últimos Envios</a> " +
-                                    "<a href= \"#contact\">Configurações</a> ";
+                                    "<a href= \"UltimosEnvios.aspx\">Últimos Envios</a> " +
+                                    "<a href= \"ConfiguraParceiro.aspx\">Configurações</a> ";
                 }
                 else if (Session["active_page"].ToString() == "home_parceiro")
                 {
                     Literal1.Text = "<a href= \"CadastroCliente.aspx\">Clientes</a>" +
-                                    "<a href= \"#services\">Relatórios</a> " +
-                                    "<a href= \"#clients\">Configurações</a> " +
-                                    "<a href= \"#contact\">Ajuda</a> ";
+                                    "<a href= \"UltimosEnvios.aspx\">Últimos Envios</a> " +
+                                    "<a href= \"RelatoriosParceiros\">Relatórios</a> " +
+                                    "<a href= \"ConfiguraParceiro.aspx\">Configurações</a> " +
+                                    "<a href= \"AjudaParceiro.aspx\">Ajuda</a> ";
                 }
                 else
                 {
