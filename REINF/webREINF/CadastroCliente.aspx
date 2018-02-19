@@ -12,12 +12,13 @@
     <div class="container">
         <h2>Incluir novo acesso de Cliente</h2>
         <p>Inclusão de novo cliente de parceiro para envio de arquivos.</p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert-warning"/>
     </div>
     <br />
     <div class="container">
         <div class="row">
             <div class="col-25">
-                <label for="fname" class="col-auto">Contato</label>
+                <label for="fname" class="col-auto">Contato</label><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="O Campo 'Contato' não pode ser deixado em branco!" ControlToValidate="nomeTextBox" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="text" CssClass="txt" placeholder="Nome do Contato da Empresa" ID="nomeTextBox" runat="server"></asp:TextBox>
@@ -25,7 +26,7 @@
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="lname" class="col-auto">Razão Social</label>
+                <label for="lname" class="col-auto">Razão Social</label><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="O Campo 'Razão Social' não pode ser deixado em branco!" ControlToValidate="razaoTextBox" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="text" CssClass="txt" placeholder="Nome da Empresa" ID="razaoTextBox" runat="server"></asp:TextBox>
@@ -33,7 +34,7 @@
         </div>
         <div class="row">
             <div class="col-25">
-                <label for="lname" class="col-auto">Email</label>
+                <label for="lname" class="col-auto">Email</label><asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="O Campo 'E-mail' não pode ser deixado em branco!" ControlToValidate="emailTextBox" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="text" CssClass="txt" placeholder="Email" ID="emailTextBox" runat="server"></asp:TextBox>
@@ -66,6 +67,8 @@
         <div class="row">
             <div class="col-25">
                 <label for="lname" class="col-auto">Senha Inicial</label>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="O Campo 'Senha' não pode ser deixado em branco!" ControlToValidate="senhaTextBox" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="O Campo 'Senha' deve ter pelo menos 6 caracteres" ControlToValidate="senhaTextBox" ValidationExpression="(.){6}" ForeColor="#CC3300" >*</asp:RegularExpressionValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="password" CssClass="txt" placeholder="*Será alterada no primeiro acesso" ID="senhaTextBox" runat="server"></asp:TextBox>

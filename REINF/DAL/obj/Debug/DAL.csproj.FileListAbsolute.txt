@@ -14,3 +14,16 @@ C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Npgs
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.dll
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll.config
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\DAL.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Model.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Model.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.xml
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.pdb

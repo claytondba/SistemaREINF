@@ -11,6 +11,7 @@
     <div class="container">
         <h2>Configurações Básicas</h2>
         <p>Personalização do Portal</p>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="1" CssClass="alert-warning"/>
     </div>
     <br />
     <div class="container">
@@ -26,6 +27,9 @@
         <div class="row">
             <div class="col-25">
                 <label for="lname" class="col-auto">Confirmar Senha</label>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="As senhas não conferem!" ControlToCompare="senhaTextBox" ControlToValidate="senhaTextBox2" ForeColor="#CC3300" ValidationGroup="1">*</asp:CompareValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="O Campo 'Senha' deve ter pelo menos 6 caracteres" ControlToValidate="senhaTextBox2" ValidationExpression=".{6,}" ForeColor="#CC3300" ValidationGroup="1">*</asp:RegularExpressionValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="O Campo 'Senha' não pode estar em branco!" ControlToValidate="senhaTextBox2" ForeColor="#CC3300" ValidationGroup="1">*</asp:RequiredFieldValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="password" CssClass="txt" placeholder="Senha" ID="senhaTextBox2" runat="server"></asp:TextBox>
@@ -34,7 +38,7 @@
         <br />
         <div class="row">
             <div class="col-sm-12">
-                <asp:Button ID="Button1" runat="server" Text="Confirmar " OnClick="Button1_Click" />
+                <asp:Button ID="Button1" runat="server" Text="Confirmar " OnClick="Button1_Click" ValidationGroup="1" />
             </div>
         </div>
         <div class="row">

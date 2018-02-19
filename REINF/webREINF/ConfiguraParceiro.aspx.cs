@@ -32,7 +32,7 @@ namespace webREINF
 
             usuBll.AtualizaPrimeiroAcesso(usuario, senhaTextBox.Text);
 
-            Response.Redirect("HomeCliente.aspx");
+            Response.Redirect("HomeParceiro.aspx");
         }
     }
 }

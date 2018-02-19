@@ -4,3 +4,9 @@ C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.dll
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\bin\Release\Model.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\bin\Release\Model.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.csprojResolveAssemblyReference.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.csproj.CoreCompileInputs.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Release\Model.pdb

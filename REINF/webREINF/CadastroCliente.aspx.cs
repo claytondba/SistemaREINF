@@ -58,6 +58,9 @@ namespace webREINF
         {
             //if(string.IsNullOrEmpty(nomeTextBox.Text))
             UsuariosReinfModel usuLogado = (UsuariosReinfModel)Session["usuario"];
+            if (Session["edit_reg"] == null)
+                Session["edit_reg"] = false;
+
             if ((bool)Session["edit_reg"])
             {
                 UsuariosReinfModel usu = (UsuariosReinfModel)Session["edit_usuario"];
@@ -102,7 +105,6 @@ namespace webREINF
                 Response.Redirect("CadastroCliente.aspx");
             }
         }
-
         protected void cnpjTextBox_TextChanged(object sender, EventArgs e)
         {
 

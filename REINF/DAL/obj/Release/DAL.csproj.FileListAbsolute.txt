@@ -14,3 +14,16 @@ C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DA
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.dll
 C:\Users\clayt\Documents\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\DAL.dll.config
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\DAL.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\DAL.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\Model.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\Npgsql.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\System.Threading.Tasks.Extensions.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\Model.pdb
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\Npgsql.xml
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\bin\Release\System.Threading.Tasks.Extensions.xml
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.csproj.CoreCompileInputs.cache
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.dll
+C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Release\DAL.pdb
