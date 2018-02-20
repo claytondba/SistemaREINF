@@ -15,4 +15,15 @@
         <p>Relatórios gerenciais.</p>
     </div>
     <br />
+    <div class="container">
+        <p>Relatório de ocorrências de clientes cadastrados</p>
+        <asp:GridView ID="GridView1" CssClass="myGridClass" runat="server" AutoGenerateColumns="False" DataKeyNames="id" >
+            <Columns>
+                <asp:BoundField DataField="cnpj" HeaderText="CNPJ" />
+                <asp:BoundField DataField="razaosocial" HeaderText="Razão" />
+                <asp:BoundField DataField="codigo" HeaderText="Código" />
+                <asp:BoundField DataField="descricao" HeaderText="Descrição" />
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

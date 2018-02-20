@@ -63,6 +63,7 @@
     <Compile Include="Framework\DAL.cs" />
     <Compile Include="Framework\GenericDAL.cs" />
     <Compile Include="Framework\Lockup.cs" />
+    <Compile Include="OcorrenciaDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionDAL.cs" />
     <Compile Include="SysFormTriggerDAL.cs" />

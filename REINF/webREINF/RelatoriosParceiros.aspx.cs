@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BLL;
+using Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +13,19 @@ namespace webREINF
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+                if (Session["usuario"] == null)
+                    Response.Redirect("Login.aspx");
 
+                UsuariosReinfModel usu = (UsuariosReinfModel)Session["usuario"];
+                OcorrenciaBLL ocoBll = new OcorrenciaBLL();
+
+                GridView1.DataSource =
+                ocoBll.GetOcorrenciasByParceiro(usu.id);
+
+                GridView1.DataBind();
+            }
         }
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="Framework\BLL.cs" />
     <Compile Include="Framework\IBLL.cs" />
     <Compile Include="Framework\UsuarioModel.cs" />
+    <Compile Include="OcorrenciaBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionBLL.cs" />
     <Compile Include="SysFormTriggerBLL.cs" />

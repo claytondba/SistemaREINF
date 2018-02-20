@@ -48,6 +48,7 @@
     <Compile Include="Framework\Model.cs" />
     <Compile Include="Framework\Ordenadora.cs" />
     <Compile Include="LockUpModel.cs" />
+    <Compile Include="OcorrenciaModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SessionModel.cs" />
     <Compile Include="SysFormTriggerModel.cs" />

@@ -19,7 +19,7 @@ Entre com sucesso no dia 15/02
 
 Ajustes e melhorias verificados, prazo para correções 20/02
 
-- [ ] Leitura da tabela ocorrências na guia relatórios. (Depende da alteração de Tabela Yan)
+- [x] Leitura da tabela ocorrências na guia relatórios. 
 - [x] Não aceitar campos em branco no cadastro de Cliente.
 - [x] Não aceitar campos em branco na troca de senha de parceiros.
 - [x] Não aceitar campos em branco na troca de senha de cliente.
