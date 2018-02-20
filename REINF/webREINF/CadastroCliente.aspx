@@ -12,7 +12,15 @@
     <div class="container">
         <h2>Incluir novo acesso de Cliente</h2>
         <p>Inclusão de novo cliente de parceiro para envio de arquivos.</p>
-        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert-warning"/>
+        <asp:ValidationSummary ID="ValidationSummary1" runat="server" CssClass="alert-warning" />
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <!-- Popup Modal -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Cliente cadastrado com sucesso!!!</p>
+            </div>
+        </div>
     </div>
     <br />
     <div class="container">
@@ -68,7 +76,7 @@
             <div class="col-25">
                 <label for="lname" class="col-auto">Senha Inicial</label>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="O Campo 'Senha' não pode ser deixado em branco!" ControlToValidate="senhaTextBox" ForeColor="#CC3300">*</asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="O Campo 'Senha' deve ter pelo menos 6 caracteres" ControlToValidate="senhaTextBox" ValidationExpression=".{6,}" ForeColor="#CC3300" >*</asp:RegularExpressionValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="O Campo 'Senha' deve ter pelo menos 6 caracteres" ControlToValidate="senhaTextBox" ValidationExpression=".{6,}" ForeColor="#CC3300">*</asp:RegularExpressionValidator>
             </div>
             <div class="col-75">
                 <asp:TextBox type="password" CssClass="txt" placeholder="*Será alterada no primeiro acesso" ID="senhaTextBox" runat="server"></asp:TextBox>

@@ -58,6 +58,12 @@ namespace webREINF
         {
             //if(string.IsNullOrEmpty(nomeTextBox.Text))
             UsuariosReinfModel usuLogado = (UsuariosReinfModel)Session["usuario"];
+            if(usuLogado == null)
+            {
+                Response.Redirect("Login.aspx");
+                return;
+            }
+
             if (Session["edit_reg"] == null)
                 Session["edit_reg"] = false;
 
@@ -101,6 +107,28 @@ namespace webREINF
                 new UsuariosReinfBLL().FInsert(usu);
 
                 //new UsuariosReinfBLL().AtualizaSenha(usu, "Candinho2018");
+
+                try
+                {
+                    string corpoEmail =string.Format("<h1>Olá</h1> {0}" +
+                                    "<p>Seu acesso ao sistema Web REINF foi configurado por um de nossos parceiros!</p>" +
+                                    "<p> Acesse o sistema com as seguintes credencias:</p><br/>" +
+                                    "Usuário: {1} <br/>" +
+                                    "Senha:   {2} <br/><br/>"+
+                                    "Parceiro cadastrante: {3}<br/>" +
+                                    "<p>Sua senha deverá ser cadastrada no primeiro acesso!</p>",
+                                    usu.nome, usu.login, senhaTextBox.Text, usuLogado.razao_social);
+
+                    Email email = new Email("postmaster@mic.ind.br",usu.email, "Novo acesso ao sssistema REINF",
+                        "Novo acesso ao sistema REINF",corpoEmail,"");
+                    email.Enviar();
+
+
+                }
+                catch (Exception ex)
+                {
+                    
+                }
 
                 Response.Redirect("CadastroCliente.aspx");
             }
