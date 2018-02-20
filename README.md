@@ -25,4 +25,4 @@ Ajustes e melhorias verificados, prazo para correções 20/02
 - [x] Não aceitar campos em branco na troca de senha de cliente.
 - [x] Validação de senhas nas telas de primeiro acesso
 - [x] Correção de erro em gravação de clientes
-- [ ] Envio de email para login inicial (Depende de informações de smtp Yan)
+- [x] Envio de email para login inicial
