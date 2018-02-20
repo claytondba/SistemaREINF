@@ -21,6 +21,12 @@ namespace webREINF
                 }
 
                 UsuariosReinfModel usuario = (UsuariosReinfModel)Session["usuario"];
+                if(usuario.primeiro_acesso && Session["active_page"].ToString() != "cliente_acesso")
+                {
+                    Response.Redirect("ClienteAcesso.aspx");
+                    return;
+                }
+
                 //Label1.Text = string.Format(
                 //   "Olá {0}, bem vindo! Escolha a operação desejada no menu ao lado.", usuario.nome);
 

@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteParceiro.master.cs" Inherits="webREINF.SiteParceiro" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="Content/SiteParceiro.css" rel="stylesheet" />
+    <script src="Scripts/bootstrap.js"></script>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div class="topnav">
+            <a class="active" href="HomeParceiro.aspx">Home</a>
+            <a href="CadastroCliente.aspx">Clientes</a>
+            <a href="RelatoriosParceiros.aspx">Relatórios</a>
+            <a href="ConfiguraParceiro.aspx">Configurações</a>
+            <a href="AjudaParceiro.aspx">Ajuda</a>
+            <a class="active" href="Logout.aspx">Logout</a>
+        </div>
+        <div class="sidenav">
+            <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+            <!--<a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#clients">Clients</a>
+            <a href="#contact">Contact</a> -->
+        </div>
+        <div class="main">
+            <br />
+            <br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <br />
+
+
+    </form>
+</body>
+</html>

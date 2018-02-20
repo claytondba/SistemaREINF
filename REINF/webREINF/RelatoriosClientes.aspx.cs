@@ -18,6 +18,8 @@ namespace webREINF
                 if (Session["usuario"] == null)
                     Response.Redirect("Login.aspx");
 
+                Session["active_page"] = "relatorios_clientes";
+
                 UsuariosReinfModel usu = (UsuariosReinfModel)Session["usuario"];
                 OcorrenciaBLL ocoBll = new OcorrenciaBLL();
 

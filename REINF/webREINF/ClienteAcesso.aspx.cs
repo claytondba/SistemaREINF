@@ -13,7 +13,8 @@ namespace webREINF
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            Session["active_page"] = "";
+            if (!Page.IsPostBack)
+                Session["active_page"] = "cliente_acesso";
         }
 
         protected void Button1_Click(object sender, EventArgs e)

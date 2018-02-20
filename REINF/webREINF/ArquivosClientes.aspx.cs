@@ -16,6 +16,8 @@ namespace webREINF
         {
             if (!Page.IsPostBack)
             {
+                Session["active_page"] = "arquivos_clientes";
+
                 if (Session["usuario"] == null)
                     Response.Redirect("Login.aspx");
 
