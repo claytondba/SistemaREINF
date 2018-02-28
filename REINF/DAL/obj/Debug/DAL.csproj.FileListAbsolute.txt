@@ -40,3 +40,16 @@ C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.csprojRes
 C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.dll
 C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.pdb
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll.config
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\DAL.dll
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\DAL.pdb
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\Model.dll
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.dll
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\Model.pdb
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\Npgsql.xml
+C:\Projetos\SistemaREINF\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Projetos\SistemaREINF\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Projetos\SistemaREINF\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Projetos\SistemaREINF\REINF\DAL\obj\Debug\DAL.dll
+C:\Projetos\SistemaREINF\REINF\DAL\obj\Debug\DAL.pdb
