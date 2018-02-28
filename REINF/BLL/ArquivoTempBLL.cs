@@ -1,19 +1,13 @@
-﻿using Model.Framework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model
+namespace BLL
 {
-    public class ArquivosModel : Framework.Model
+    public class ArquivoTempBLL
     {
-        public ArquivosModel()
-        {
-            Entity = "arquivos";
-        }
-        [PrimaryKey(isKey =true)]
         public int id { get; set; }
         public int id_parceiro { get; set; }
         public int id_cliente { get; set; }
@@ -24,6 +18,5 @@ namespace Model
         public DateTime data_evento { get; set; }
         public string status { get; set; }
         public string nome_arquivo { get; set; }
-        
     }
 }

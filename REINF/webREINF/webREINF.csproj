@@ -154,6 +154,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="GeraEventos.aspx" />
     <Content Include="Global.asax" />
     <Content Include="HomeCliente.aspx" />
     <Content Include="HomeParceiro.aspx" />
@@ -162,6 +163,7 @@
     <Content Include="image\pencil16.png" />
     <Content Include="image\pencil.png" />
     <Content Include="image\delete.png" />
+    <Content Include="image\seleciona.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
     <Content Include="PerceiroAcesso.aspx" />
@@ -312,6 +314,13 @@
     </Compile>
     <Compile Include="EnviosClientes.aspx.designer.cs">
       <DependentUpon>EnviosClientes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GeraEventos.aspx.cs">
+      <DependentUpon>GeraEventos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GeraEventos.aspx.designer.cs">
+      <DependentUpon>GeraEventos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

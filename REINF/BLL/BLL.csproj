@@ -30,6 +30,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -42,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArquivosBLL.cs" />
+    <Compile Include="ArquivoTempBLL.cs" />
     <Compile Include="ConfigBLL.cs" />
+    <Compile Include="ConsumoWebServiceBLL.cs" />
     <Compile Include="Email.cs" />
     <Compile Include="Framework\BLL.cs" />
     <Compile Include="Framework\IBLL.cs" />

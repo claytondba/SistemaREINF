@@ -10,3 +10,9 @@ C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Debug\Model.csprojResolveAssem
 C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Debug\Model.dll
 C:\Projetos\Glandata\SistemaREINF\REINF\Model\obj\Debug\Model.pdb
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\bin\Debug\Model.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\bin\Debug\Model.pdb
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\obj\Debug\Model.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\Model\obj\Debug\Model.pdb

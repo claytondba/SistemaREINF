@@ -27,7 +27,7 @@
                 <asp:BoundField DataField="data_cadastro" HeaderText="Data Cadastro" />
                 <asp:CommandField ShowSelectButton="True" ButtonType="Image" SelectImageUrl="~/image/pencil16.png" />
                 <asp:ButtonField ButtonType="Image" CommandName="excluir" ImageUrl="~/image/delete.png" Text="Botão" />
-                <asp:ButtonField ButtonType="Image" CommandName="download" ImageUrl="~/image/download.png" />
+                <asp:ButtonField ButtonType="Image" CommandName="download" ImageUrl="~/image/download.png" />                
             </Columns>
         </asp:GridView>
     </div>

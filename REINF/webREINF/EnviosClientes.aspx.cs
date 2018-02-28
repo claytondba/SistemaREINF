@@ -55,6 +55,52 @@ namespace webREINF
                 Response.BinaryWrite(arquivo.arquivo_xls);
                 Response.End();
             }
+            else if (e.CommandName == "seleciona")
+            {
+                
+
+                int indexa = Convert.ToInt32(e.CommandArgument);
+                GridViewRow linha = GridView1.Rows[indexa];
+                var chave = linha.Cells[0].Text;
+                //var linhaSelecionada = GridView1.SelectedRow.DataItemIndex;
+                // var valor = GridView1.DataKeys[linhaSelecionada];
+
+
+
+                string selecao = e.CommandName;
+
+            }
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            ConsumoWebServiceBLL ObjConsumoWebServiceBLL = new ConsumoWebServiceBLL();
+            List<int> IdSelecionados = new List<int>();            
+
+            foreach (GridViewRow linha in GridView1.Rows)
+            {
+                CheckBox cbx = linha.FindControl("checks") as CheckBox;
+
+                if (cbx != null)
+                {
+                    if (cbx.Checked)
+                    {
+                        //sb.AppendLine(string.Format("Produto {0}", linha.Cells[1].Text));
+                        int idSelecionado = int.Parse(linha.Cells[0].Text);
+                        IdSelecionados.Add(idSelecionado);
+                    }
+                }
+            }
+
+            List<ArquivoTempBLL> XlsEventos = ObjConsumoWebServiceBLL.ArquivosXlsSelecionados(IdSelecionados);
+
+
+
         }
     }
 }

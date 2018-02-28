@@ -27,3 +27,16 @@ C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyR
 C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.dll
 C:\Projetos\Glandata\SistemaREINF\REINF\DAL\obj\Debug\DAL.pdb
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\DAL.dll.config
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\DAL.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\DAL.pdb
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\Model.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\Npgsql.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\Model.pdb
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\Npgsql.xml
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.dll
+C:\Users\yan.silva\Desktop\SistemaREINF-master\REINF\DAL\obj\Debug\DAL.pdb
