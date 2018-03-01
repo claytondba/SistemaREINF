@@ -22,3 +22,9 @@ C:\Projetos\SistemaREINF\REINF\Model\obj\Debug\Model.csprojResolveAssemblyRefere
 C:\Projetos\SistemaREINF\REINF\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Projetos\SistemaREINF\REINF\Model\obj\Debug\Model.dll
 C:\Projetos\SistemaREINF\REINF\Model\obj\Debug\Model.pdb
+C:\Projetos\REINF\REINF\Model\bin\Debug\Model.dll
+C:\Projetos\REINF\REINF\Model\bin\Debug\Model.pdb
+C:\Projetos\REINF\REINF\Model\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Projetos\REINF\REINF\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Projetos\REINF\REINF\Model\obj\Debug\Model.dll
+C:\Projetos\REINF\REINF\Model\obj\Debug\Model.pdb
