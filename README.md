@@ -17,7 +17,7 @@ Checklist REINF
 - [x] Inclusão da tabela 'arquivos' (sugestão: id, id_parceiro, id_cliente, arquivo_xls, tipo_evento, envio_xml, resposta_rfb)
 Entre com sucesso no dia 15/02
 
-Ajustes e melhorias verificados, prazo para correções 20/02.....
+Ajustes e melhorias verificados, prazo para correções 20/02.....()()
 
 - [x] Leitura da tabela ocorrências na guia relatórios. 
 - [x] Não aceitar campos em branco no cadastro de Cliente.
