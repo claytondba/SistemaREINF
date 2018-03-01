@@ -12,7 +12,7 @@ namespace webREINF
     public partial class RelatoriosParceiros : System.Web.UI.Page
     {
         /// <summary>
-        /// Load da Pagina inicial,,,,,,
+        /// Load da Pagina inicial
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
