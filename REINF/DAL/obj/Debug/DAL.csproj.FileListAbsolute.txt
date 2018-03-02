@@ -66,3 +66,4 @@ C:\Projetos\REINF\REINF\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Projetos\REINF\REINF\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
 C:\Projetos\REINF\REINF\DAL\obj\Debug\DAL.dll
 C:\Projetos\REINF\REINF\DAL\obj\Debug\DAL.pdb
+C:\Projetos\REINF\REINF\DAL\bin\Debug\ExcelLibrary.dll

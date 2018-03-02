@@ -81,3 +81,4 @@ C:\Projetos\REINF\REINF\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
 C:\Projetos\REINF\REINF\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Projetos\REINF\REINF\BLL\obj\Debug\BLL.dll
 C:\Projetos\REINF\REINF\BLL\obj\Debug\BLL.pdb
+C:\Projetos\REINF\REINF\BLL\bin\Debug\ExcelLibrary.dll

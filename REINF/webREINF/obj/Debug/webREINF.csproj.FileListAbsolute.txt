@@ -253,3 +253,4 @@ C:\Projetos\REINF\REINF\webREINF\obj\Debug\webREINF.csprojResolveAssemblyReferen
 C:\Projetos\REINF\REINF\webREINF\obj\Debug\webREINF.csproj.CoreCompileInputs.cache
 C:\Projetos\REINF\REINF\webREINF\obj\Debug\webREINF.dll
 C:\Projetos\REINF\REINF\webREINF\obj\Debug\webREINF.pdb
+C:\Projetos\REINF\REINF\webREINF\bin\ExcelLibrary.dll

@@ -47,7 +47,7 @@ namespace BLL
             new Model.SessionModel()
             {
                 User = "postgres",
-                Password = "beleza",
+                Password = "Candinho@2018",
                 Server = "localhost",
                 Database = "reinf"
 
